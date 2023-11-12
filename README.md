@@ -1,3 +1,3 @@
-# name
+# Сервис авторизации
 
-- [task1](./task1) - task1 name
+- [auth-app](./auth-app) - Сервис авторизации

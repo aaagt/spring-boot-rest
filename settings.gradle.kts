@@ -1,4 +1,4 @@
-rootProject.name = "name"
+rootProject.name = "auth-app"
 
 
 pluginManagement {
@@ -8,4 +8,4 @@ pluginManagement {
 }
 
 
-include("task1")
+include("auth-app")

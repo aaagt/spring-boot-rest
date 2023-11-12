@@ -3,7 +3,7 @@ plugins {
 }
 
 
-group = "org.example"
+group = "aaagt.springboot.rest"
 
 
 allprojects {
