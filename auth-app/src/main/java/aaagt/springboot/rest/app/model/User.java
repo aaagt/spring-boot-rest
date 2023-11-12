@@ -1,11 +1,13 @@
 package aaagt.springboot.rest.app.model;
 
-public class UserCredentials {
+public class User {
 
+    //@NotBlank(message = "User name is empty")
     private final String user;
+    //@NotBlank(message = "Password is empty")
     private final String password;
 
-    public UserCredentials(String user, String password) {
+    public User(String user, String password) {
         this.user = user;
         this.password = password;
     }
@@ -15,10 +17,10 @@ public class UserCredentials {
         if (this == obj) {
             return true;
         }
-        return obj instanceof UserCredentials &&
+        return obj instanceof User &&
                 obj.hashCode() == this.hashCode() &&
-                user.equals(((UserCredentials) obj).getUser()) &&
-                password.equals(((UserCredentials) obj).getPassword());
+                user.equals(((User) obj).getUser()) &&
+                password.equals(((User) obj).getPassword());
     }
 
     @Override
