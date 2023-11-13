@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+
+  # Экземпляры приложения
+
+  auth1:
+    build: './auth-app'
+    ports:
+      - "8081:8080"
+
+  auth2:
+    build: './auth-app'
+    ports:
+      - "8082:8080"
+
+  auth3:
+    build: './auth-app'
+    ports:
+      - "8083:8080"
+
+
+  # Обратное проксирование и статика
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./static:/var/www:ro
+      - access_log_vol:/var/log/nginx/
+    ports:
+      - "80:8000"
+
+volumes:
+  access_log_vol:
